@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique Élégance | Mostaganem</title>
+    <title>Boutique Ilies Mosta | Réseaux Sociaux</title>
+    <!-- Intégration des icônes FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Configuration de base et arrière-plan Boutique de nuit */
@@ -36,7 +37,7 @@
             animation: fadeIn 1s ease-out;
         }
 
-        /* Logo Étoile / Robe stylisée */
+        /* Logo Robe / Haute Couture stylisée */
         .logo-container {
             margin-bottom: 15px;
         }
@@ -135,52 +136,51 @@
         <div class="logo-container">
             <i class="fa-solid fa-wand-magic-sparkles logo-icon"></i>
         </div>
-        <h1>BOUTIQUE ÉLÉGANCE</h1>
-        <div class="subtitle">Mostaganem • Haute Couture</div>
+        <!-- Nouveau Titre de ta boutique -->
+        <h1>Boutique Ilies Mosta</h1>
+        <div class="subtitle">Robes de Soirées • Algérie</div>
 
         <div class="links-container">
-            <a href="#" class="btn-link" target="_blank">
-                <span><i class="fa-brands fa-instagram"></i> Catalogue Instagram</span>
+            <!-- LIEN FACEBOOK : Remplace 'nom_de_ta_page' par ton identifiant exact -->
+            <a href="https://facebook.com/nom_de_ta_page" class="btn-link" target="_blank">
+                <span><i class="fa-brands fa-facebook-f"></i> Rejoignez-nous sur Facebook</span>
                 <i class="fa-solid fa-chevron-right arrow-icon"></i>
             </a>
 
-            <a href="#" class="btn-link" target="_blank">
-                <span><i class="fa-brands fa-facebook-f"></i> Page Facebook</span>
+            <!-- LIEN TIKTOK : Remplace '@ton_username' par ton compte exact -->
+            <a href="https://tiktok.com/@ton_username" class="btn-link" target="_blank">
+                <span><i class="fa-brands fa-tiktok"></i> Suivez-nous sur TikTok</span>
                 <i class="fa-solid fa-chevron-right arrow-icon"></i>
             </a>
 
-            <a href="#" class="btn-link" target="_blank">
-                <span><i class="fa-brands fa-whatsapp"></i> Contact WhatsApp</span>
+            <!-- LIEN WHATSAPP : Remplace le XXXXXXX par ton numéro (ex: 213550123456 sans le +) -->
+            <a href="https://wa.me/213XXXXXXX" class="btn-link" target="_blank">
+                <span><i class="fa-brands fa-whatsapp"></i> Contactez-nous sur WhatsApp</span>
                 <i class="fa-solid fa-chevron-right arrow-icon"></i>
             </a>
 
+            <!-- Bouton de Partage Mobile Interactif (JS) -->
             <a href="#" class="btn-link" id="shareBtn">
                 <span><i class="fa-solid fa-share-nodes"></i> Partager cette page</span>
                 <i class="fa-solid fa-chevron-right arrow-icon"></i>
             </a>
         </div>
 
-        <footer>© 2026 Boutique Élégance</footer>
+        <footer>© 2026 Boutique Ilies Mosta</footer>
     </div>
 
     <script>
         document.getElementById('shareBtn').addEventListener('click', function(e) {
             e.preventDefault();
-            // Utilise l'API de partage native du smartphone si disponible
             if (navigator.share) {
                 navigator.share({
-                    title: 'Boutique Élégance',
-                    text: 'Découvrez nos robes de soirées exclusives à Mostaganem !',
+                    title: 'Boutique Ilies Mosta',
+                    text: 'Découvrez nos collections de robes de soirées à Mostaganem !',
                     url: window.location.href
-                }).then(() => {
-                    console.log('Partage réussi !');
-                }).catch((err) => {
-                    console.log('Erreur de partage:', err);
-                });
+                }).catch((err) => console.log('Erreur de partage:', err));
             } else {
-                // Copie alternative dans le presse-papier si le partage natif n'est pas supporté (PC)
                 navigator.clipboard.writeText(window.location.href);
-                alert("Lien de la boutique copié dans votre presse-papier !");
+                alert("Lien copié dans le presse-papier !");
             }
         });
     </script>
